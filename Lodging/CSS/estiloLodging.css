@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: clip;
+}
+
+body{
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #3c3c3c;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*########### 1200 ##############*/
+header{
+    width: 1200px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #3c3c3c;
+    font-size: 24px;
+}
+
+/*logo*/
+header a img{
+    width: 48px;
+    vertical-align: middle;
+}
+
+header nav a {
+    padding: 8px;
+}
+
+header span {
+    display: none; /*oculta hamburger*/
+}
+
+main {
+    width: 100%;
+    margin: auto;
+}
+
+#hero{
+    height: 840px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#hero article{
+    width: 528px;
+    text-align: center;
+}
+#hero article h1{
+    font-weight: 600;
+    font-size: 44px;
+}
+
+#hero article p{
+    font-size: 20px;
+    margin: 32px 0px;
+}
+
+#hero article a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    margin: auto;
+    height: 72px;
+    border-radius: 16px;
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: rgba(88, 106, 110, 0.5);
+    line-height: 72px;
+    transition: 500ms;
+}
+#hero article a:hover{
+    background-color: rgba(88, 106, 110, 0.7);
+}
+
+#hero article a img{
+    width: 48px;
+    margin-right: 16px;
+}
+#hero video{
+position: absolute;
+top: 0px;
+z-index: -10;
+width: 100%;
+height: 840px;
+object-fit: cover;
+}
+
+/* reviews */
+#reviews{
+    width: 1200px;
+    height: 240px;
+    margin: 40px auto 0px auto;
+    display: flex;
+    align-items: center;
+    /*justify-content: space-around;*/
+    padding: 0 80px;
+    justify-content: space-between;
+}
+    #reviews article{
+        width: 256px;
+        text-align: center;
+    }
+        #reviews article p{
+            margin: 24px 0px;
+        }
+/* vacancy */
+#vacancy{
+    width: 1200px;
+    margin: auto;
+    height: 512px;
+    display: flex;
+    flex-wrap: wrap;
+}
+    #vacancy article{
+        width: 512px;
+    }
+    #vacancy article:nth-child(1){
+        background-image: url(../imgs/lake-house.png);
+    }
+
+/*###########1024##############*/
+@media screen and (max-width: 1024px) {
+    header {
+        width: 1024px;
+    }
+    #reviews{
+        width: 1024px;
+        padding: 0 64px;
+    }
+}
+
+/*###########768##############*/
+@media screen and (max-width: 768px) {
+    header {
+        display: block;
+        width: 768px;
+        height: 80px;
+        margin: auto;
+    }
+
+    header a {
+        position: relative;
+        z-index: 10;
+        top: 16px;
+        left: 16px;
+    }
+
+    /* Navegacion */
+    header nav {
+        background-color: #fff;
+        padding-bottom: 16px;
+        /* desplegado translateY(32px)*/
+        transform: translateY(-216px);
+        transition: .5s;
+    }
+
+    header nav a {
+        display: block;
+        text-align: center;
+        padding: 8px;
+    }
+
+    header span {
+        display: inline-block;
+        position: absolute;
+        top: 28px;
+        right: 24px;
+        cursor: pointer;
+    }
+
+    header span img {
+        width: 20px;
+    }
+
+    main {
+        width: 768px;
+    }
+
+    #hero {
+        height: 720px;
+    }
+
+    #hero video {
+        width: 768px;
+        height: 720px;
+    }
+    #reviews{
+        width: 768px;
+        padding: 0 40px;
+    }
+        #reviews article{
+            width: 200px;
+        }
+}
+
+/*###########640##############*/
+
+@media screen and (max-width: 640px) {
+    header {
+        display: block;
+        width: 640px;
+    }
+
+    main {
+        width: 640px;
+    }
+
+    #hero {
+        height: 604px;
+    }
+
+    #hero video {
+        width: 640px;
+        height: 604px;
+    }
+    #reviews{
+        width: 640px;
+        height: 584px;
+        flex-direction: column;
+        padding: 40px;
+        row-gap: 56px;
+    }
+}
